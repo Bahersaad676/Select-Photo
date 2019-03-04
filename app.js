@@ -46,3 +46,4 @@ function clicks() {
 		tm2.textContent = clickTimes1;
 	}
 }
+

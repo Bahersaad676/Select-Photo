@@ -18,11 +18,6 @@ console.log(selectElem.selectedIndex); // print index of option
 
 
 selectElem.onchange = function() {
-	checkVal();
-	clicks();
-}
-
-function checkVal() {
 	if (this.value === "bmw") {
 		imgs.style.display = "block";
 		imgs1.style.display = "none";
@@ -33,6 +28,8 @@ function checkVal() {
 		imgs.style.display = "none";
 		imgs1.style.display = "none";
 	}
+
+	clicks();
 }
 
 function clicks() {

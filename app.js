@@ -18,6 +18,11 @@ console.log(selectElem.selectedIndex); // print index of option
 
 
 selectElem.onchange = function() {
+	checkVal();
+	clicks();
+}
+
+function checkVal() {
 	if (this.value === "bmw") {
 		imgs.style.display = "block";
 		imgs1.style.display = "none";
@@ -28,11 +33,12 @@ selectElem.onchange = function() {
 		imgs.style.display = "none";
 		imgs1.style.display = "none";
 	}
-	//var p = document.createElement('p');
+}
+
+function clicks() {
 	imgs.onclick = function() {
 		clickTimes++;
 		tm1.textContent = clickTimes;
-		//imgs.append(p);
 	}
 
 	imgs1.onclick = function() {
@@ -40,29 +46,3 @@ selectElem.onchange = function() {
 		tm2.textContent = clickTimes1;
 	}
 }
-
-// when one click on the div in another function create elem and ++ it > then display it 
-
-/*
-function we(txt) {
-	var arr = [];
-	var collc = 0;
-for (let i = 0; i < txt.length; i++) {
-	if (txt.charAt(i) > "m" ) {
-		collc++;
-	}
-}
-return (collc + "/" + txt.length).toString();
-}
-
-function we(txt) {
-	var arr = [];
-for (let i = 0; i < txt.length; i++) {
-	if (txt.charAt(i) > "m" ) {
-		arr.push(txt.charAt(i));
-	}
-}
-return (arr.length + "/" + txt.length).toString();
-}
-
-*/
